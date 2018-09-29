@@ -1,0 +1,28 @@
+<a [routerLink]="['/employees/add']" routerLinkActive="router-link-active" class="btn btn-primary">Add Employee</a>
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Salary</th>
+      <th>Profile Pic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of employeeList">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.salary}}</td>
+      <td>
+        <img [src]="item.profilePic" style="height:25px;width:25px;"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<pre>
+  {{ employeeList | json }}
+</pre>
+
+

@@ -1,0 +1,11 @@
+
+  <ul>
+    <li *ngFor="let item of employeesList">
+      {{item.name}}
+    </li>
+  </ul>
+  <button (click)="employeesStrike()">We strike</button>
+
+<pre>
+  {{employeesList | json}}
+</pre>
